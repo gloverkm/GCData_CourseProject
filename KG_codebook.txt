@@ -1,0 +1,87 @@
+Codebook for Course Project for Getting and Cleaning Data
+
+This data contains replicate experiments from the same individual under the 
+same activity, with a total of 10299 instances. This is further clarified in 
+the updated new dataset from the original weblink cited below.
+
+
+The Codes here come from the dataset with three additional headers:
+
+Experiment Paramenters:
+Subject.Number
+	30 individuals were used in this study
+
+Activity
+	6 different activities were monitored: "walking", "walking_upstairs", 
+	"walking_downstairs", "sitting", "standing", "laying"
+
+Dataset
+	The data is divided into two sets. 70% of the participants were in the 
+	train set, with the remaining 30% in the test set.
+
+Measurement Data:
+The following summaries of measurements are reported in this table using this script. 
+(These names were obtained by the following code at the end of the attached script
+if you would like confirmation:
+clean_names <- matchcols(mergedData, with = c("mean", "Mean", "std"), method = "or"), 
+They are listed in the following order by groups, with the description listed last:
+
+By mean:
+[1] "tBodyAcc.mean...X"               "tBodyAcc.mean...Y"               "tBodyAcc.mean...Z"              
+ [4] "tGravityAcc.mean...X"            "tGravityAcc.mean...Y"            "tGravityAcc.mean...Z"           
+ [7] "tBodyAccJerk.mean...X"           "tBodyAccJerk.mean...Y"           "tBodyAccJerk.mean...Z"          
+[10] "tBodyGyro.mean...X"              "tBodyGyro.mean...Y"              "tBodyGyro.mean...Z"             
+[13] "tBodyGyroJerk.mean...X"          "tBodyGyroJerk.mean...Y"          "tBodyGyroJerk.mean...Z"         
+[16] "tBodyAccMag.mean.."              "tGravityAccMag.mean.."           "tBodyAccJerkMag.mean.."         
+[19] "tBodyGyroMag.mean.."             "tBodyGyroJerkMag.mean.."         "fBodyAcc.mean...X"              
+[22] "fBodyAcc.mean...Y"               "fBodyAcc.mean...Z"               "fBodyAcc.meanFreq...X"          
+[25] "fBodyAcc.meanFreq...Y"           "fBodyAcc.meanFreq...Z"           "fBodyAccJerk.mean...X"          
+[28] "fBodyAccJerk.mean...Y"           "fBodyAccJerk.mean...Z"           "fBodyAccJerk.meanFreq...X"      
+[31] "fBodyAccJerk.meanFreq...Y"       "fBodyAccJerk.meanFreq...Z"       "fBodyGyro.mean...X"             
+[34] "fBodyGyro.mean...Y"              "fBodyGyro.mean...Z"              "fBodyGyro.meanFreq...X"         
+[37] "fBodyGyro.meanFreq...Y"          "fBodyGyro.meanFreq...Z"          "fBodyAccMag.mean.."             
+[40] "fBodyAccMag.meanFreq.."          "fBodyBodyAccJerkMag.mean.."      "fBodyBodyAccJerkMag.meanFreq.." 
+[43] "fBodyBodyGyroMag.mean.."         "fBodyBodyGyroMag.meanFreq.."     "fBodyBodyGyroJerkMag.mean.."    
+[46] "fBodyBodyGyroJerkMag.meanFreq.."
+
+By Mean:
+[1] "angle.tBodyAccMean.gravity."          "angle.tBodyAccJerkMean..gravityMean."
+[3] "angle.tBodyGyroMean.gravityMean."     "angle.tBodyGyroJerkMean.gravityMean."
+[5] "angle.X.gravityMean."                 "angle.Y.gravityMean."                
+[7] "angle.Z.gravityMean."
+
+By std:
+$std
+ [1] "tBodyAcc.std...X"           "tBodyAcc.std...Y"           "tBodyAcc.std...Z"          
+ [4] "tGravityAcc.std...X"        "tGravityAcc.std...Y"        "tGravityAcc.std...Z"       
+ [7] "tBodyAccJerk.std...X"       "tBodyAccJerk.std...Y"       "tBodyAccJerk.std...Z"      
+[10] "tBodyGyro.std...X"          "tBodyGyro.std...Y"          "tBodyGyro.std...Z"         
+[13] "tBodyGyroJerk.std...X"      "tBodyGyroJerk.std...Y"      "tBodyGyroJerk.std...Z"     
+[16] "tBodyAccMag.std.."          "tGravityAccMag.std.."       "tBodyAccJerkMag.std.."     
+[19] "tBodyGyroMag.std.."         "tBodyGyroJerkMag.std.."     "fBodyAcc.std...X"          
+[22] "fBodyAcc.std...Y"           "fBodyAcc.std...Z"           "fBodyAccJerk.std...X"      
+[25] "fBodyAccJerk.std...Y"       "fBodyAccJerk.std...Z"       "fBodyGyro.std...X"         
+[28] "fBodyGyro.std...Y"          "fBodyGyro.std...Z"          "fBodyAccMag.std.."         
+[31] "fBodyBodyAccJerkMag.std.."  "fBodyBodyGyroMag.std.."     "fBodyBodyGyroJerkMag.std.."
+	
+	
+Description:
+(Directly taken from source below README file)
+
+"The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions."	
+	
+	
+	
+	
+Source: Data Science Coursera, Getting and Cleaning Data, Sept 2015 using data from
+this archived dataset: 
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+from this study (some updates included):
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
